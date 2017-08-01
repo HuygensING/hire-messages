@@ -9,9 +9,11 @@ addMessage({
   type: 'error',
   value: 'This is a error',
 });
+```
 
-// The component is already initialized, just add the var
-// another React component
+```html
+// The component is already initialized, just add `Messages`
+// to another React component
 <MyApp>
   <Header>My App header</Header>
   <Body>My App body</Body>
