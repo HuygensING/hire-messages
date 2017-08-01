@@ -1,4 +1,5 @@
 # Hire Messages
+React component able to show error, warning and success messages
 
 ## Example usage
 ```javascript
