@@ -2,6 +2,7 @@ import * as React from "react";
 import {connect, Provider} from 'react-redux';
 import store from './store';
 import {ErrorMessage, Messages, SuccessMessage, WarningMessage} from "./components";
+import { removeMessage } from "./actions";
 export { addMessage } from './actions';
 
 const messageByType = {
@@ -10,28 +11,24 @@ const messageByType = {
 	warning: WarningMessage,
 };
 
-class HireMessagesComp extends React.Component<any, any> {
-	public render() {
-		return (
-			<Messages>
-				{
-					this.props.messages.map((m, i) => {
-						const Comp = messageByType[m.type];
-						return (
-							<Comp
-								index={i}
-								key={i}
-								remove={m.remove}
-							>
-								{m.value}
-							</Comp>
-						);	
-					})
-				}
-			</Messages>
-		);
-	}
-}
+const HireMessagesComp = (props) =>
+	<Messages>
+		{
+			props.messages.map((m, i) => {
+				const Message = messageByType[m.type];
+				return (
+					<Message
+						index={i}
+						key={i}
+						onClick={() => removeMessage(m.id)}
+						remove={m.remove}
+					>
+						{m.value}
+					</Message>
+				);
+			})
+		}
+	</Messages>;
 
 const HireMessages = connect(
 	state => ({
