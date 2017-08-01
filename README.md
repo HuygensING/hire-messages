@@ -1,12 +1,12 @@
 # Hire Messages
 
 ## Example usage
-```
+```javascript
 import Messages, { addMessage } from 'hire-messages';
 
 // Call `addMessage` to add a message. It's true.
 addMessage({
-	type: 'error',
+    type: 'error',
 	value: 'This is a error',
 });
 
