@@ -1,0 +1,34 @@
+{
+  "name": "hire-messages",
+  "version": "1.0.0",
+  "description": "HuygensING React Messages",
+  "main": "build/index.js",
+  "scripts": {
+    "bump": "hi-bump",
+    "start": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HuygensING/hire-messages.git"
+  },
+  "author": "gijsjan.brouwer@huygens.knaw.nl (https://github.com/Gijsjan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HuygensING/hire-messages/issues"
+  },
+  "homepage": "https://github.com/HuygensING/hire-messages",
+  "devDependencies": {
+    "@types/react": "^15.6.0",
+    "@types/react-redux": "^4.4.47",
+    "@types/redux": "^3.6.0",
+    "hi-bump": "^1.1.1",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "styled-components": "^2.1.1"
+  }
+}
